@@ -136,7 +136,7 @@ export default class LoginScreen extends React.Component {
           .auth()
           .signInWithEmailAndPassword(this.state.email, this.state.password);
         if (response) {
-          return (Alert.alert("succesfully logged in"))
+         this.props.navigation.navigate("Donate");
         }
       } catch (error) {
         console.log(error.message);
